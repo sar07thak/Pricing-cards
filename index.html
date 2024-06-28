@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pricing cards</title>
     <link rel="stylesheet" href="output.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
-<body>
+<body class="relative">
     <!-- main-container -->
     <div class="bg-slate-800 min-h-screen flex flex-col justify-center items-center">
        <!-- 1st-container -->
-      <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
+      <div class="flex flex-col md:flex-row space-y-3  md:space-y-0 md:space-x-4">
      <!-- 1st column -->
-     <div class=" bg-slate-700 text-white rounded-xl">
+     <div class="containers bg-slate-700 hover:bg-violet-800 duration-700 text-white rounded-xl">
         <div class="bg-slate-800 mx-3 mt-3 p-8 rounded-t-xl text-center">
             <div class="text-center uppercase">basic</div>
             <h2 class="font-serif text-5xl mt-10 px-3">100Gb</h2>
             <div class="text-center mt-3 font-medium">$1.99/Month</div>
-            <button class="border border-violet-600 my-6 py-3 px-10 rounded-lg hover:bg-violet-800 duration-200">Purchase</button>
+            <button class="btn_purchase border border-violet-600 my-6 py-3 px-10 rounded-lg hover:bg-violet-800 duration-200">Purchase</button>
         </div>
         <div class="border-t border-slate-700"></div>
         <div class="bg-slate-800 mx-3 mb-3 p-8 rounded-b-xl text-center">
             <div class="flex flex-col space-y-2  ">
                 
-                <div>100GB of storage</div>
+            <div>100GB of storage</div>
             <div>Options to add members</div>
             <div>Extra member benefits</div>
 
@@ -33,12 +40,12 @@
      </div>
      <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3">
         <!-- 2nd column -->
-        <div class=" bg-violet-800 text-white rounded-xl">
+        <div class="containers bg-slate-700 hover:bg-violet-800 duration-700 text-white rounded-xl">
            <div class="bg-slate-800 mx-3 mt-3 p-8 rounded-t-xl text-center">
                <div class="text-center uppercase">STANDARD</div>
                <h2 class="font-serif text-5xl mt-10 px-3">200Gb</h2>
                <div class="text-center mt-3 font-medium">$3.99/Month</div>
-               <button class="border border-violet-600 my-6 py-3 px-10 rounded-lg hover:bg-violet-800 duration-200">Purchase</button>
+               <button class="btn_purchase border border-violet-600 my-6 py-3 px-10 rounded-lg hover:bg-violet-800 duration-200">Purchase</button>
            </div>
            <div class="border-t border-slate-700"></div>
            <div class="bg-slate-800 mx-3 mb-3 p-8 rounded-b-xl text-center">
@@ -55,12 +62,12 @@
          </div>
          <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3">
             <!-- 3rd column -->
-            <div class=" bg-slate-700 text-white rounded-xl">
+            <div class="containers bg-slate-700 hover:bg-violet-800 duration-700 text-white rounded-xl">
                <div class="bg-slate-800 mx-3 mt-3 p-8 rounded-t-xl text-center">
                    <div class="text-center uppercase">PREMIUM</div>
                    <h2 class="font-serif text-5xl mt-10 px-3">2TB</h2>
                    <div class="text-center mt-3 font-medium">$8.99/Month</div>
-                   <button class="border border-violet-600 my-6 py-3 px-10 rounded-lg hover:bg-violet-800 duration-200">Purchase</button>
+                   <button class="btn_purchase border border-violet-600 my-6 py-3 px-10 rounded-lg hover:bg-violet-800 duration-200">Purchase</button>
                </div>
                <div class="border-t border-slate-700"></div>
                <div class="bg-slate-800 mx-3 mb-3 p-8 rounded-b-xl text-center">
@@ -76,7 +83,23 @@
             </div>
            
              </div>
-      </div>
-    </div>    
+            </div>
+            <!-- overlay -->
+            <div class="overlay hidden h-screen w-screen absolute top-0 left-0 z-0 backdrop-blur-sm bg-transparent "></div>
+            <!-- hidden window -->
+            <div class="modal hidden font-sans absolute text-white h-1/2 w-[70%] top-1/4 p-20 bg-slate-600 rounded-xl z-50 ">
+                <button class="close-modal absolute left-[90%] top-[10%] text-3xl"><i class="fa-solid fa-xmark"></i></button>
+                <h1 class="text-2xl">I'm a modal window 😍</h1>
+                <p class="text-lg">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Enim ex nihil aperiam nobis doloribus dolorem ea voluptas similique maxime tempora eum neque sint, nulla laboriosam debitis sed 
+                    voluptatum unde harum explicabo atque. 
+                    Accusantium perferendis maiores, amet ipsa modi enim quidem ea ratione rem 
+                    beatae suscipit iusto dolores dolorum dicta libero! Unde facere exercitationem, totam, laudantium 
+                    hic eveniet error doloremque quas recusandae illum, necessitatibus ab. Voluptas architecto quasi maiores ad voluptatibus?
+                </p>
+            </div>
+    </div> 
+    <script src="script.js"></script>   
 </body>
 </html>
